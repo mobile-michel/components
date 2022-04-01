@@ -6,7 +6,7 @@ export const SITE = {
 
 export const NAV_ITEMS = {
     home: {
-        path: './index.html',
+        path: './',
         title: 'Home'
     },
     list: {

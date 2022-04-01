@@ -2,10 +2,18 @@
 import {Markdown} from 'astro/components';
 import Article from '../components/articleComponent.astro'
 import {SITE} from '../config.ts'
+import {COMPONENTS} from '../components.ts'
 const title = 'Introduction'
 const description = "Texte d'introduction pour l'article paru dans CNN Travel"
 ---
 <Article content={{title, description}}>
 	<h2>{SITE.description}</h2>
 	<p>First paragraph.</p>
+			<ul>
+			{
+				Object.keys(COMPONENTS).map(navItemKey => <li>
+				<a href={COMPONENTS[navItemKey].link}>{COMPONENTS[navItemKey].title}</a><br>
+				framework: {COMPONENTS[navItemKey].framework}</li>)
+			}
+			</ul>
 </Article>
