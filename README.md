@@ -26,6 +26,23 @@ astro.config.mjs ─────────────────────
  
  * npm install --save-dev @astrojs/tailwind
  * Astro will generate a minimal ./tailwind.config.cjs file
+ * create /src/style/global.css:
+
+```
+global.css ──────────────╮
+ │ @tailwind base;       │
+ │ @tailwind components; │
+ │ @tailwind utilities;  │
+ ```
+
+ * /src/pages/index.astro:
+
+```
+index.astro ─────────────────────╮
+ │ ---                           │
+ │ import '../styles/global.css' │
+ │ ---                           │
+ ```
 
 ## Project Structure
 
