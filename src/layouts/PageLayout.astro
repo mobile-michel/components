@@ -1,0 +1,46 @@
+---
+import {SITE} from '../config.ts'
+import Navbar from '../components/navbar-simple.astro'
+import '../styles/global.css'
+const { content } = Astro.props
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{content.title} | {SITE.title}</title>
+	<meta name="description" content={SITE.description}>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+<body>
+	<div id="wrapper" class="prose lg:prose-xl prose-slate">
+		<header>
+				<h1>{SITE.title}</h1>
+		</header>
+		<nav>
+		<Navbar />
+		</nav>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<p>{SITE.footer}</p>
+		</footer>
+	</div>
+</body>
+</html>
+
+<style>
+	body {
+		@apply min-h-screen flex
+	}
+	#wrapper {
+		@apply max-w-5xl mx-auto flex flex-col bg-slate-200 p-5
+	}
+	main {
+		@apply grow flex
+	}
+	nav ul {
+		@apply flex
+	}
+</style>

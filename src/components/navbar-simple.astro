@@ -1,0 +1,11 @@
+---
+import {NAV_ITEMS} from '../config.ts'
+---
+        <nav>
+			<ul>
+			{
+				Object.keys(NAV_ITEMS).map(navItemKey => <li>
+				<a href={NAV_ITEMS[navItemKey].path}>{NAV_ITEMS[navItemKey].title}</a></li>)
+			}
+			</ul>
+		</nav>

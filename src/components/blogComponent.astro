@@ -1,0 +1,30 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+const data = Astro.fetchContent('../pages/aircraft/*.md')
+const { content } = Astro.props
+---
+<PageLayout content={content}>
+			<aside>
+				<ul>{data.map((post) => (
+					<li><a href={post.url}>{post.title}</a></li>
+				))}
+				</ul>
+			</aside>
+			<section>
+                <h2>{content.title}</h2>
+				<h3>Production: {content.production}</h3>
+				<h4>Deliveries: {content.deliveries}</h4>
+				<img src={content.photo} class="w-96">
+				<slot />
+				<p>Source: <a href={content.wikipedia}>{content.wikipedia}</a></p>
+			</section>
+</PageLayout>
+
+<style>
+	aside {
+		@apply flex-1 order-1
+	}
+	section {
+		@apply flex-1
+	}
+</style>
