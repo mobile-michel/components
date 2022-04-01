@@ -6,15 +6,15 @@ export const SITE = {
 
 export const NAV_ITEMS = {
     home: {
-        path: './',
+        path: '/',
         title: 'Home'
     },
     card: {
-        path: './card',
+        path: '/card',
         title: 'Cards'
     },
     footer: {
-        path: './footer',
+        path: '/footer',
         title: 'Footers'
     }
 }
