@@ -1,0 +1,30 @@
+---
+import Article from '../components/articleComponent.astro'
+import Footer1 from '../mamba/footer1.astro'
+import Footer2 from '../mamba/footer2.astro'
+import Footer3 from '../mamba/footer3.astro'
+import Footer4 from '../mamba/footer4.astro'
+import Footer5 from '../mamba/footer5.astro'
+import {SITE} from '../config.ts'
+const title = 'Cards'
+const description = "Tailwind CSS component from Mamba UI"
+---
+<Article content={{title, description}}>
+	<h2>{title}</h2>
+	<p>{description}</p>
+	<Footer1 />
+	<hr>
+	<Footer2 />
+	<hr>
+	<Footer3 />
+	<hr>
+	<Footer4 />
+	<hr>
+	<Footer5 />
+</Article>
+
+<style>
+	hr {
+		@apply border-2
+	}
+</style>

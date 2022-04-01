@@ -1,0 +1,19 @@
+---
+import {Markdown} from 'astro/components';
+import Article from '../components/articleComponent.astro'
+import Card1 from '../mamba/card1.astro'
+import Card2 from '../mamba/card2.astro'
+import Card3 from '../mamba/card3.astro'
+import Card4 from '../mamba/card4.astro'
+import {SITE} from '../config.ts'
+const title = 'Cards'
+const description = "Tailwind CSS component from Mamba UI"
+---
+<Article content={{title, description}}>
+	<h2>{title}</h2>
+	<p>{description}</p>
+	<Card1 />
+	<Card2 />
+	<Card3 />
+	<Card4 />
+</Article>

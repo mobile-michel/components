@@ -13,7 +13,7 @@ const { content } = Astro.props
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
-	<div id="wrapper" class="prose lg:prose-xl prose-slate">
+	<div id="wrapper">
 		<header>
 				<h1>{SITE.title}</h1>
 		</header>
@@ -35,7 +35,7 @@ const { content } = Astro.props
 		@apply min-h-screen flex
 	}
 	#wrapper {
-		@apply max-w-5xl mx-auto flex flex-col bg-slate-200 p-5
+		@apply max-w-5xl mx-auto flex flex-col bg-gray-50 p-5
 	}
 	main {
 		@apply grow flex
