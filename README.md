@@ -1,6 +1,6 @@
 # Astro Components
 
-Astro 0.25 &npx astro add Tailwind CSS 1.0.23
+Astro 0.25 & Tailwind CSS 1.0.23
 
 All sorts of Tailwind components from different websites
 
@@ -42,6 +42,16 @@ index.astro ─────────────────────╮
  │ ---                           │
  │ import '../styles/global.css' │
  │ ---                           │
+ ```
+
+* npm install --save-dev @tailwindcss/typography
+
+```
+tailwind.config.cjs ────────────────────────╮
+ │ plugins: [                               │
+ │      require('@tailwindcss/typography'), │
+ │      // ...                              │
+ │    ],                                    │
  ```
 
 ## Project Structure

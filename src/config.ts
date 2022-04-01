@@ -1,9 +1,7 @@
 export const SITE = {
-    title: 'World Best-selling Airplanes',
-    description: 'Best-selling civil airplanes of all time, and what made them stand out from the rest? Total deliveries as of December 31, 2021.',
-    source: 'CNN Travel',
-    link: 'https://edition.cnn.com/travel/article/world-best-selling-airplanes/',
-    footer: '© 2022 Wikipedia & CNN Travel'
+    title: 'Tailwind Components',
+    description: 'Tailwind CSS components from different websites',
+    footer: '© 2022 Michel Maillard'
 }
 
 export const NAV_ITEMS = {
@@ -12,8 +10,8 @@ export const NAV_ITEMS = {
         title: 'Home'
     },
     list: {
-        path: './aircraft/boeing737.html',
-        title: 'List'
+        path: './component1',
+        title: 'First component'
     }
 }
 
